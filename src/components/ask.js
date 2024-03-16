@@ -18,7 +18,7 @@ const Ask = () => {
           headers: {
             "Content-Type": "application/json",
           },
-          body: JSON.stringify({ prompt: question }),
+          body: JSON.stringify({ prompt: "Generate css for "+question }),
         });
 
         const data = await response.json();
@@ -81,7 +81,7 @@ const Ask = () => {
           placeholder="Describe a style or paste your React/HTML code here...
           Make sure to be as descriptive as possible or ensure your code is well-formatted."
           value={question}
-          onChange={(e) => setQuestion("Generate css for "+e.target.value)}
+          onChange={(e) => setQuestion(e.target.value)}
         />
         <button onClick={handleAsk} disabled={isGenerating}>
           {isGenerating ? <span>Generating...</span> : <span><BiSolidMagicWand /> Do the magic</span>}
