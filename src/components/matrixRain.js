@@ -15,7 +15,7 @@ const MatrixRain = () => {
     canvas.height = window.innerHeight;
 
     // Setting up the letters
-    var letters = "WWW.AJNASNB.ME";
+    var letters = "www.ajnasnb.live";
     letters = letters.split("");
 
     // Setting up the columns
